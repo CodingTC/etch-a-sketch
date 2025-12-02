@@ -17,9 +17,6 @@ function createGrid(num)
                 newCol.classList.add("on-hover");
             });
 
-            newCol.addEventListener("mouseleave", () => {
-                newCol.classList.remove("on-hover");
-            });
             newRow.appendChild(newCol);
         }
         sketchPad.appendChild(newRow);
