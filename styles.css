@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body
+{
+    display: flex;    
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+.main-content
+{
+    display: flex;
+    height: 800px;
+    width: 800px;
+}
+
+.title-text
+{
+    text-align: center;
+}
+
+.grid-squares
+{
+    border: 1px solid blue;
+    flex: 1;
+}
+
+.row
+{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.on-hover
+{
+    background-color: #bbbb00; 
+}
+
+.sketchpad
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.grid-set-para
+{
+    display: flex;
+    flex-direction: column;
+}
