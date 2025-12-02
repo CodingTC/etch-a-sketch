@@ -13,15 +13,16 @@ function createGrid(num)
         {
             const newCol = document.createElement("div");
             newCol.classList.add("grid-squares");
-            newCol.addEventListener("mouseenter", () => {
-                newCol.classList.add("on-hover");
-            });
-
             newRow.appendChild(newCol);
         }
         sketchPad.appendChild(newRow);
     }
 
+    sketchPad.addEventListener("mouseenter", (e) => {
+            if(e.target.classList.contains("grid-squares")) {
+                e.target.classList.add("on-hover");
+            }
+        }, true);
 }
 
 function clearGrid()
