@@ -25,6 +25,15 @@ function createGrid(num)
         }, true);
 }
 
+function getRandRGB()
+{
+    const r = parseInt(Math.random() * 256);
+    const g = parseInt(Math.random() * 256);
+    const b = parseInt(Math.random() * 256);
+
+    return `#${r}${g}${b}`;
+}
+
 function clearGrid()
 {
     const sketchPad = document.querySelector(".sketchpad");
