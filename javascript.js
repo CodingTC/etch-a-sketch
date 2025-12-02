@@ -25,6 +25,16 @@ function createGrid(num)
                 const g = rgb[1];
                 const b = rgb[2];
                 e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                const curOpacity = parseFloat(e.target.style.opacity);
+                if(curOpacity < 1)
+                {
+                    const newOpacity = curOpacity + .1;
+                    e.target.style.opacity = newOpacity;
+                }
+                else if(!curOpacity)
+                {
+                    e.target.style.opacity = .1;
+                }
             }
         }, true);
 }
