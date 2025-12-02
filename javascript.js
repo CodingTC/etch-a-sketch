@@ -20,7 +20,11 @@ function createGrid(num)
 
     sketchPad.addEventListener("mouseenter", (e) => {
             if(e.target.classList.contains("grid-squares")) {
-                e.target.classList.add("on-hover");
+                const rgb = getRandRGB();
+                const r = rgb[0];
+                const g = rgb[1];
+                const b = rgb[2];
+                e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             }
         }, true);
 }
@@ -31,7 +35,7 @@ function getRandRGB()
     const g = parseInt(Math.random() * 256);
     const b = parseInt(Math.random() * 256);
 
-    return `#${r}${g}${b}`;
+    return [r, g, b];
 }
 
 function clearGrid()
