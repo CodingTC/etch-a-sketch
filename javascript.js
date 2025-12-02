@@ -13,13 +13,8 @@ function createGrid(num)
         {
             const newCol = document.createElement("div");
             newCol.classList.add("grid-squares");
-            newRow.appendChild(newCol);
-        }
-        sketchPad.appendChild(newRow);
-    }
 
-    sketchPad.addEventListener("mouseenter", (e) => {
-            if(e.target.classList.contains("grid-squares")) {
+            newCol.addEventListener("mouseenter", (e) => {
                 const rgb = getRandRGB();
                 const r = rgb[0];
                 const g = rgb[1];
@@ -35,8 +30,12 @@ function createGrid(num)
                 {
                     e.target.style.opacity = .1;
                 }
-            }
-        }, true);
+            });
+            newRow.appendChild(newCol);
+        }
+
+        sketchPad.appendChild(newRow);
+    }
 }
 
 function getRandRGB()
